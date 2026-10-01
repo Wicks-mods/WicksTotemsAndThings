@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.13 - 2026-10-01
+
+### Fixed
+
+- Loads on the 2.5.6 client without being marked out of date. The addon
+  now lists interface 20506 alongside 20505.
+
 ## 0.3.12 - 2026-07-21
 
 Air twist countdown default 5s -> 8s.

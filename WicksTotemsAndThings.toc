@@ -1,8 +1,8 @@
-## Interface: 20505
+## Interface: 20505, 20506
 ## Title: Wick's Totems and Things
 ## Notes: Totem groups, affected-player counts, and bindings for TBC shamans.
 ## Author: Wick
-## Version: 0.3.12
+## Version: 0.3.13
 ## SavedVariables: WicksTotemsDB
 ## SavedVariablesPerCharacter: WicksTotemsCharDB
 
