@@ -4,23 +4,23 @@
 
 > Shaman loadout kit for World of Warcraft: Forever. Totem presets, secure cast bar, Call of the Elements sync, imbues, talents, pre-pull checklist, racials.
 
-Part of the **[Wick suite](https://github.com/Wicksmods/WickSuite)**: precision addons built around a single fel-green-on-deep-purple aesthetic. This branch (`forever`) is the Forever build on [WickCore](https://github.com/Wicksmods/WickCore). The TBC Anniversary build lives on `main`.
+Part of the **[Wick suite](https://github.com/Wicks-mods/WickSuite)**: precision addons built around a single fel-green-on-deep-purple aesthetic. This branch (`forever`) is the Forever build on [WickCore](https://github.com/Wicks-mods/WickCore). The TBC Anniversary build lives on `main`.
 
 <!-- wick:suite-table:start -->
 | Addon | GitHub | CurseForge |
 |---|---|---|
-| **Wick's TBC BIS Tracker** | [repo](https://github.com/Wicksmods/WickidsTBCBISTracker) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-tbc-bis-tracker) |
-| **Wick's CD Tracker** | [repo](https://github.com/Wicksmods/WicksCDTracker) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-cd-tracker) |
-| **Wick's Trade Hall** | [repo](https://github.com/Wicksmods/WicksTradeHall) | [CurseForge](https://www.curseforge.com/wow/addons/trade-hall) |
-| **Wick's Macro Builder** | [repo](https://github.com/Wicksmods/WicksMacroBuilder) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-macro-builder) |
-| **Wick's Combat Log** | [repo](https://github.com/Wicksmods/WicksCombatLog) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-combat-log) |
-| **Wick's Stats** | [repo](https://github.com/Wicksmods/WicksStats) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-stats) |
-| **Wick's Quest Key** | [repo](https://github.com/Wicksmods/WicksQuestKey) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-quest-key) |
-| **Wick's Totems and Things** | [repo](https://github.com/Wicksmods/WicksTotemsAndThings) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-totems-and-things) |
-| **Wick's Bags** | [repo](https://github.com/Wicksmods/WicksBags) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-bags) |
-| **Wick's Travel Form** | [repo](https://github.com/Wicksmods/WicksTravelForm) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-travel-form) |
-| **Wick's Ledger** | [repo](https://github.com/Wicksmods/WicksLedger) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-ledger) |
-| **Wick's Wardrobe** | [repo](https://github.com/Wicksmods/WicksWardrobe) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-wardrobe) |
+| **Wick's TBC BIS Tracker** | [repo](https://github.com/Wicks-mods/WickidsTBCBISTracker) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-tbc-bis-tracker) |
+| **Wick's CD Tracker** | [repo](https://github.com/Wicks-mods/WicksCDTracker) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-cd-tracker) |
+| **Wick's Trade Hall** | [repo](https://github.com/Wicks-mods/WicksTradeHall) | [CurseForge](https://www.curseforge.com/wow/addons/trade-hall) |
+| **Wick's Macro Builder** | [repo](https://github.com/Wicks-mods/WicksMacroBuilder) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-macro-builder) |
+| **Wick's Combat Log** | [repo](https://github.com/Wicks-mods/WicksCombatLog) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-combat-log) |
+| **Wick's Stats** | [repo](https://github.com/Wicks-mods/WicksStats) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-stats) |
+| **Wick's Quest Key** | [repo](https://github.com/Wicks-mods/WicksQuestKey) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-quest-key) |
+| **Wick's Totems and Things** | [repo](https://github.com/Wicks-mods/WicksTotemsAndThings) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-totems-and-things) |
+| **Wick's Bags** | [repo](https://github.com/Wicks-mods/WicksBags) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-bags) |
+| **Wick's Travel Form** | [repo](https://github.com/Wicks-mods/WicksTravelForm) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-travel-form) |
+| **Wick's Ledger** | [repo](https://github.com/Wicks-mods/WicksLedger) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-ledger) |
+| **Wick's Wardrobe** | [repo](https://github.com/Wicks-mods/WicksWardrobe) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-wardrobe) |
 
 **Community:** [Discord](https://discord.gg/GWGTMhYBZY)
 <!-- wick:suite-table:end -->
@@ -50,7 +50,7 @@ loadout kit: everything a shaman sets up before the pull.
 
 ## Install
 
-Requires **[WickCore](https://github.com/Wicksmods/WickCore)**. Extract both
+Requires **[WickCore](https://github.com/Wicks-mods/WickCore)**. Extract both
 folders into the Forever client's `Interface\AddOns\`.
 
 ## Usage
@@ -74,4 +74,4 @@ World of Warcraft: Forever, 1.60.x, Interface 16001. Requires WickCore.
 
 ## License
 
-MIT for code (see [LICENSE](LICENSE)). Brand chrome and the "Wick's" wordmark are trademarked, see [TRADEMARK.md](https://github.com/Wicksmods/WickSuite/blob/main/TRADEMARK.md). Racial data from [talentsforever.com](https://talentsforever.com) (CC BY 4.0) via WickCore.
+MIT for code (see [LICENSE](LICENSE)). Brand chrome and the "Wick's" wordmark are trademarked, see [TRADEMARK.md](https://github.com/Wicks-mods/WickSuite/blob/main/TRADEMARK.md). Racial data from [talentsforever.com](https://talentsforever.com) (CC BY 4.0) via WickCore.
