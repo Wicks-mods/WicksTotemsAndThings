@@ -1,31 +1,36 @@
 # Changelog
 
-## 0.3.13 - 2026-10-01
+## Unreleased
+
+- Removed two debug lines that printed to chat at every shaman login.
+- Shows in the game's addon list with an icon and the two-tone Wick title, under a Wick's Mods heading.
+
+## 0.3.13 (2026-10-01)
 
 ### Fixed
 
 - Loads on the 2.5.6 client without being marked out of date. The addon
   now lists interface 20506 alongside 20505.
 
-## 0.3.12 - 2026-07-21
+## 0.3.12 (2026-07-21)
 
 Air twist countdown default 5s -> 8s.
 
 - Air twist (Windfury / Grace of Air) default refresh raised from 5 to 8 seconds. Fire (15s), Earth (20s), Water (15s) unchanged.
 
-## 0.3.11 - 2026-05-30
+## 0.3.11 (2026-05-30)
 
 Options tab blank after WoW patch.
 
 - Fixed Options pane showing only the first section after a WoW client update that removed `OnMouseMove` as a valid script handler for Frame objects. The size sliders' mouse-capture frame now uses `OnUpdate` instead, which fires while the capture is active (i.e. only during a drag). All sections now render correctly.
 
-## 0.3.10 - 2026-05-14
+## 0.3.10 (2026-05-14)
 
 Fixed slider drag causing "blocked from performing an action only available to the Blizzard UI" error when trying to set focus on a unit.
 
 - Replaced the per-frame `OnUpdate` polling approach in custom sliders (which called `IsMouseButtonDown` every frame and accumulated taint) with a mouse-capture frame that only fires on `OnMouseMove` and `OnMouseUp`. No protected functions are polled in a per-frame loop.
 
-## 0.3.9 - 2026-05-11
+## 0.3.9 (2026-05-11)
 
 Per-shield toggles in Proc Floaters.
 
@@ -33,7 +38,7 @@ Per-shield toggles in Proc Floaters.
 - Saved-vars: `WicksTotemsDB.procs.shieldsEnabled` retired in favor of `WicksTotemsDB.procs.shields[short]`. An old `shieldsEnabled = false` is migrated by propagating `false` to all three shield entries; otherwise the new map starts empty and follows learned-state defaults.
 - Main panel height 520 → 560 to fit the two extra checkbox rows.
 
-## 0.3.8 - 2026-05-08
+## 0.3.8 (2026-05-08)
 
 Per-preset element order, weapon imbue tracking, ability-based shield detection.
 
@@ -51,7 +56,7 @@ Per-preset element order, weapon imbue tracking, ability-based shield detection.
 - **Main panel height** bumped 500 → 520 to keep the Twist section inside the chrome after the "Show shields" row was added.
 - **Marketing thumbnail** regenerated with the new in-game screenshot showing shields + ankh + totem strip + imbue boxes + swing timer.
 
-## 0.3.7 - 2026-05-07
+## 0.3.7 (2026-05-07)
 
 Critical fix: ProcAlerts crash from `UnitBuff` signature mismatch.
 
@@ -59,23 +64,23 @@ Critical fix: ProcAlerts crash from `UnitBuff` signature mismatch.
 - Fixed the signature in `CooldownTracker.lua`'s shared `findAura` helper. Added `tonumber()` defensive wraps on the return values so a future signature change can't silently break the comparison again.
 - Stack-count text on proc floaters (Flurry, Maelstrom, Lightning Shield charge counts, etc.) now displays correctly again.
 
-## 0.3.6 - 2026-05-07
+## 0.3.6 (2026-05-07)
 
 - **Duplicate floater fix.** ProcAlerts now keeps a frame pool keyed by entry short. Init and Rebuild both reuse the existing floater for each entry instead of creating a new one (which left stale orphans visible). Floaters that drop out of the visible set after a respec are hidden via the pool, never re-created.
 - **Init/Rebuild ordering** — Rebuild now defers to Init if Init hasn't run yet, preventing a race where PLAYER_TALENT_UPDATE fires before LOGIN.
 
-## 0.3.5 - 2026-05-07
+## 0.3.5 (2026-05-07)
 
 - New `category = "shield"` field on TRACKED entries marks Lightning Shield, Water Shield, and Earth Shield as their own class (always-displayed with the missing-buff pulse), distinct from regular procs.
 - **Two scale sliders** in Options → Proc Floaters: "Procs size" sizes the regular floaters (Stormstrike, Flurry, Sated, Clearcasting, etc), "Shields size" sizes the always-on shield floaters independently.
 - Per-category global scale (`procs.scale` vs `procs.shieldScale`) still multiplies with each floater's per-entry override saved in `procs.perProc[<short>].scale`.
 
-## 0.3.4 - 2026-05-07
+## 0.3.4 (2026-05-07)
 
 - Main panel height bumped from 420 to 500 so the Options tab content (Proc Floaters + Twist sections) no longer spills out of the chrome.
 - New **Proc Floater size slider** in Options (Proc Floaters section). Range 60% to 180%, scales every proc + shield floater uniformly via `host:SetScale`. Per-entry scale is still saved (multiplicative with global) for future per-floater controls.
 
-## 0.3.3 - 2026-05-07
+## 0.3.3 (2026-05-07)
 
 Per-talent filtering replaces the cruder spec-tag filter.
 
@@ -87,18 +92,18 @@ Per-talent filtering replaces the cruder spec-tag filter.
 
 Result: an Elemental shaman who didn't spec Eye of the Storm no longer sees its floater. A Resto shaman who hasn't taken Earth Shield (yet) won't see that one either.
 
-## 0.3.2 - 2026-05-07
+## 0.3.2 (2026-05-07)
 
 - Slider release fix: dragging the size slider's thumb past the slider's hit area no longer leaves it stuck to the cursor. Release detection now polls `IsMouseButtonDown` every frame instead of relying solely on `OnMouseUp`.
 - "Cooldown / Proc Bar" section in Options renamed to "CD Bar" since procs split into their own floaters in v0.3.0.
 - Water Shield floater is now Restoration-only. Lightning Shield stays available to all specs (Enhance and Elemental both use it).
 
-## 0.3.1 - 2026-05-07
+## 0.3.1 (2026-05-07)
 
 - **Shield missing-buff pulse.** Lightning Shield, Water Shield, and Earth Shield (target) floaters stay visible when the buff is missing, pulsing subtly between 25% and 55% alpha as a refresh reminder. Snap to full brightness + autocast shine the moment the shield goes back up.
 - **Binding label clarified.** "Drop active preset" now reads "Drop active preset (all 4 totems in sequence)" so it's obvious that each press advances `/castsequence` rather than firing all four at once.
 
-## 0.3.0 - 2026-05-07
+## 0.3.0 (2026-05-07)
 
 Big refactor: procs and flashes split out of the cooldown bar into individual draggable floaters.
 
@@ -109,7 +114,7 @@ Big refactor: procs and flashes split out of the cooldown bar into individual dr
 - **Default layout:** 4-column grid below center on first run. `/wtt resetprocs` returns floaters to default positions.
 - **Per-floater positions** persist in `WicksTotemsDB.procs.perProc[<short>]`.
 
-## 0.2.6 - 2026-05-07
+## 0.2.6 (2026-05-07)
 
 Coverage gaps from common shaman addons.
 
@@ -118,7 +123,7 @@ Coverage gaps from common shaman addons.
 - **Water Shield + Lightning Shield charge trackers** — buff stack count for both shaman shields.
 - **Totem destroyed alert** — when an enemy kills a totem more than 5 seconds before its natural expiration, the OOR banner machinery fires `TOTEM DESTROYED: <Totem Name>` plus a `RAID_WARNING` sound. Totemic Call recalls are filtered out via `UNIT_SPELLCAST_SUCCEEDED` watch.
 
-## 0.2.5 - 2026-05-07
+## 0.2.5 (2026-05-07)
 
 Resizable bars.
 
@@ -126,7 +131,7 @@ Resizable bars.
 - Scale persists per account via `WicksTotemsDB.{bar,cd,swing}.scale`.
 - New `:SetScale(v)` method on each bar module — clamps to [0.5, 2.5] and applies via `host:SetScale`.
 
-## 0.2.4 - 2026-05-07
+## 0.2.4 (2026-05-07)
 
 Performance pass. No feature changes; addressing reported in-combat lag and stutter, especially in 25-man raids.
 
@@ -137,7 +142,7 @@ Performance pass. No feature changes; addressing reported in-combat lag and stut
 - **RangeWarning**: UNIT_AURA-driven Check is now throttled to 0.2s and skipped entirely when no buff totems are active. Stops a per-aura-tick storm in raids from re-walking 4 totem slots × 40 buff slots.
 - **AffectedCount**: poll interval relaxed from 0.5s to 0.75s. Pre-built unit-name pools and a reused buffer eliminate per-poll string concatenation and table allocation, saving ~30 allocations per cycle in 25-mans.
 
-## 0.2.3 - 2026-05-06
+## 0.2.3 (2026-05-06)
 
 CD bar recovery + diagnostic visibility.
 
@@ -145,7 +150,7 @@ CD bar recovery + diagnostic visibility.
 - Init prints "init starting" / "init done" markers to chat so it's obvious whether it ran and how many entries it built.
 - New slash command `/wtt cdrebuild` — tears down the bar state and re-runs Init from scratch. Recovery for the "bar disappeared" case without a full /reload.
 
-## 0.2.2 - 2026-05-06
+## 0.2.2 (2026-05-06)
 
 Fix: cooldown bar disappearing after spec detection edge cases.
 
@@ -155,7 +160,7 @@ Fix: cooldown bar disappearing after spec detection edge cases.
 - Init now keeps the host frame alive even when the initial entry list is empty, so the talent-update rebuild has something to populate.
 - `/wtt cdtest` now reports active spec and host visibility.
 
-## 0.2.1 - 2026-05-06
+## 0.2.1 (2026-05-06)
 
 Spec-aware filter for the cooldown / proc bar.
 
@@ -163,7 +168,7 @@ Spec-aware filter for the cooldown / proc bar.
 - Spec is detected from highest-points talent tab (Elemental / Enhancement / Restoration).
 - Bar rebuilds automatically on respec via PLAYER_TALENT_UPDATE.
 
-## 0.2.0 - 2026-05-06
+## 0.2.0 (2026-05-06)
 
 Resto + Elemental coverage and precise totem range checks.
 
@@ -189,7 +194,7 @@ Resto + Elemental coverage and precise totem range checks.
 
 Slim totem icon strip with secure cast buttons + keybind labels, affected-count overlay (now precise), out-of-range warning, totem twisting with click-now cue, swing timer, ankh reagent counter, editable presets, options panel.
 
-## 0.1.0 - 2026-05-06
+## 0.1.0 (2026-05-06)
 
 Initial release. Enhancement-focused shaman command bar.
 

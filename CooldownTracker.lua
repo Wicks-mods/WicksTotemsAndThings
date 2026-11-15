@@ -565,7 +565,6 @@ function CT:Init()
     if self.initialized then return end
     if not WT.isShaman then return end   -- shaman-only
     self.initialized = true
-    print("|cff4FC778Wick's Totems|r CD bar init starting...")
 
     self.activeSpec = getActiveSpec()
     -- v0.3: CD bar now ONLY shows kind=cd and kind=both entries.
@@ -657,8 +656,6 @@ function CT:Init()
     tf:RegisterEvent("CHARACTER_POINTS_CHANGED")
     tf:SetScript("OnEvent", function() CT:RebuildForSpec() end)
 
-    print(("|cff4FC778Wick's Totems|r CD bar init done: %d entries, spec=%s"):format(
-        #visible, tostring(self.activeSpec or "(unknown)")))
     self:Refresh()
 end
 
