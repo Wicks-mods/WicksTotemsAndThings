@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.14 (2026-11-15)
 
 - Removed two debug lines that printed to chat at every shaman login.
 - Shows in the game's addon list with an icon and the two-tone Wick title, under a Wick's Mods heading.

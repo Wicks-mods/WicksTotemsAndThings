@@ -2,7 +2,7 @@
 ## Title: |cffD4C8A1Wick's|r |cff4FC778Totems and Things|r
 ## Notes: Totem groups, affected-player counts, and bindings for TBC shamans.
 ## Author: Wick
-## Version: 0.3.13
+## Version: 0.3.14
 ## SavedVariables: WicksTotemsDB
 ## SavedVariablesPerCharacter: WicksTotemsCharDB
 ## IconTexture: Interface\Icons\Spell_Nature_StoneSkinTotem
