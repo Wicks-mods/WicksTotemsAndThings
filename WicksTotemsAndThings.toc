@@ -1,11 +1,15 @@
 ## Interface: 16001
-## Title: Wick's Totems and Things
+## Title: |cffD4C8A1Wick's|r |cff4FC778Totems and Things|r
 ## Notes: Shaman loadout kit for World of Warcraft: Forever. Totem presets, secure cast bar, Call of the Elements sync, imbues, talents, pre-pull checklist, racials.
 ## Author: Wick
 ## Version: 0.9.0
 ## OptionalDeps: WickCore
 ## SavedVariables: WicksTotemsSaved
+## IconTexture: Interface\Icons\Spell_Nature_StoneSkinTotem
+## Category: Wick's Mods
 ## X-Website: https://wicksmods.com
+## X-License: MIT with trademark carve-out
+## X-Curse-Project-ID: 1535194
 ## X-WickCore: WickCore-1.0
 
 Core.lua
